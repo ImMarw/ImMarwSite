@@ -60,7 +60,7 @@
         <div class={`text-center mb-14 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Kontakt</span>
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Pojďme se <span class="text-cyan-600">domluvit</span></h2>
-            <p class="text-lg max-w-2xl mx-auto">Máte nápad na projekt? Napište mi nebo rovnou zavolejte – rádi se domluvíme na nezávazné konzultaci.</p>
+            <p class="text-lg max-w-2xl mx-auto">Máte nápad na projekt? Napište mi nebo rovnou zavolejte – domluvíme se na konzultaci.</p>
         </div>
 
         <div class={`grid md:grid-cols-2 gap-8 transition-all duration-700 delay-200 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
