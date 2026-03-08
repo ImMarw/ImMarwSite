@@ -84,7 +84,7 @@
                         </div>
                         <div class="text-center">
                             <div class="text-lg font-bold text-slate-800 font-heading">Jan Mareš</div>
-                            <div class="text-sm text-cyan-600 font-medium">Junior Web Developer</div>
+                            <div class="text-sm text-cyan-600 font-medium">Profilový obrázek je v řešení</div>
                         </div>
                     </div>
                 </div>
