@@ -78,8 +78,8 @@
 
         <div class={`text-center mb-20 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Jak pracuji</span>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Hladké přistání na <span class="text-cyan-600">produkci.</span></h2>
-            <p class="text-lg">Od prvního kontaktu až po dlouhodobou správu. Jasný proces bez překvapení.</p>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Jak probíhá <span class="text-cyan-600">spolupráce</span></h2>
+            <p class="text-lg">Od prvního kontaktu až po dlouhodobou správu.</p>
         </div>
 
         <div class="relative pl-12 md:pl-20 py-8">

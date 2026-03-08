@@ -1,11 +1,12 @@
 import nodemailer from 'nodemailer';
+import { env } from '$env/dynamic/private';
 
-// SMTP configuration - update these with your real SMTP credentials
-const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
-const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587');
-const SMTP_USER = process.env.SMTP_USER || '';
-const SMTP_PASS = process.env.SMTP_PASS || '';
-const SMTP_TO = process.env.SMTP_TO || 'immarw01@gmail.com'; // Your email to receive messages
+// SMTP configuration - načteno bezpečně ze SvelteKit prostředí
+const SMTP_HOST = env.SMTP_HOST || 'smtp.gmail.com';
+const SMTP_PORT = parseInt(env.SMTP_PORT || '587');
+const SMTP_USER = env.SMTP_USER || '';
+const SMTP_PASS = env.SMTP_PASS || '';
+const SMTP_TO = env.SMTP_TO || 'immarw01@gmail.com'; // Your email to receive messages
 
 /** @type {import('./$types').RequestHandler} */
 export async function POST({ request }) {
@@ -66,7 +67,7 @@ export async function POST({ request }) {
                         ${message.replace(/\n/g, '<br/>')}
                     </div>
                     <hr style="border: 1px solid #e2e8f0; margin-top: 24px;" />
-                    <p style="color: #94a3b8; font-size: 12px;">Odesláno z kontaktního formuláře na immarw.cz</p>
+                    <p style="color: #94a3b8; font-size: 12px;">Odesláno z kontaktního formuláře na immarw.vercel.com</p>
                 </div>
             `,
             text: `Nová poptávka z webu\n\nJméno: ${name}\nE-mail: ${email}\nZpráva:\n${message}`

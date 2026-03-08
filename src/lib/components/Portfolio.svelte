@@ -14,7 +14,7 @@
         {
             title: "Megas Games",
             category: "SvelteKit",
-            desc: "SaaS aplikace pro zahraniční herní server na platformě FiveM. Komplexní systém s uživatelským rozhraním, správou obsahu a interaktivními prvky.",
+            desc: "Aplikace pro zahraniční herní server na platformě FiveM. Komplexní systém s uživatelským rozhraním, správou obsahu a interaktivními prvky.",
             imageUrl: "/images/Projekt2.png",
             liveUrl: "https://megas.games/",
             githubUrl: "https://gitlab.com/users/ImMarw/projects",
@@ -70,7 +70,7 @@
             <div>
                 <span class="section-label">Portfolio</span>
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Vybrané <span class="text-cyan-600">práce.</span></h2>
-                <p class="text-lg text-slate-600 max-w-xl">Ukázka reálných projektů. Klikněte na Live Preview pro interaktivní náhled přímo zde na stránce.</p>
+                <p class="text-lg text-slate-600 max-w-xl">Ukázka projektů. Klikněte na Live Preview pro interaktivní náhled přímo zde na stránce.</p>
             </div>
             <a href="https://gitlab.com/users/ImMarw/projects" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-cyan-600 hover:border-cyan-300 font-semibold transition-all text-sm shadow-sm hover:-translate-y-0.5">
                 Celý GitLab

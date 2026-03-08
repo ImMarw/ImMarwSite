@@ -5,7 +5,7 @@
         { q: "Kolik stojí složitější web?", a: "Cena závisí na rozsahu – počet stránek, funkce (formuláře, animace, CMS) a design. Po konzultaci vám dám přesnou kalkulaci zdarma." },
         { q: "Je možné platit na splátky?", a: "Ano, u větších projektů je možné rozdělit platbu na 2–3 splátky dle dohody." },
         { q: "Co když potřebuji změny po dokončení?", a: "Drobné úpravy v rámci garance řeším zdarma. Větší rozšíření domluvíme individuálně." },
-        { q: "Jak dlouho trvá typický projekt?", a: "Jednoduchý web 1–3 týdny. Složitější projekty domluvíme individuálně dle rozsahu." },
+        { q: "Jak dlouho trvá typický projekt?", a: "Jednoduchý web je hotov během týdne. Složitější projekty domluvíme individuálně dle rozsahu." },
     ];
 
     let openFaq = null;
@@ -39,7 +39,7 @@
         <div class={`text-center mb-16 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Ceník</span>
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Transparentní <span class="text-cyan-600">ceník</span></h2>
-            <p class="text-lg max-w-2xl mx-auto">Férové ceny za kvalitní práci. Žádná skrytá překvapení – finální cenu vždy domluvíme předem.</p>
+            <p class="text-lg max-w-2xl mx-auto">Finální cenu vždy domluvíme předem.</p>
         </div>
 
         <div class={`grid md:grid-cols-2 gap-8 mb-16 transition-all duration-700 delay-200 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>

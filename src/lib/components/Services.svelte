@@ -54,7 +54,7 @@
         <div class={`mb-16 text-center transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Co nabízím</span>
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Komplexní webová <span class="text-cyan-600">řešení.</span></h2>
-            <p class="text-lg max-w-2xl mx-auto">Žádné šablony. Všechno tvořím na míru s důrazem na výkon, bezpečnost a čistotu kódu.</p>
+            <p class="text-lg max-w-2xl mx-auto">Všechno tvořím na míru s důrazem na výkon, bezpečnost a čistotu kódu.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">

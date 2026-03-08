@@ -9,11 +9,7 @@
         { name: "Nette", category: "Backend" },
         { name: "PHP 8+", category: "Backend" },
         { name: "MySQL", category: "Backend" },
-        { name: "REST API", category: "Backend" },
         { name: "Git", category: "Nástroje" },
-        { name: "Figma", category: "Nástroje" },
-        { name: "Docker", category: "Nástroje" },
-        { name: "Linux", category: "Nástroje" },
     ];
 
     const values = [

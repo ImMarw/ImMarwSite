@@ -59,7 +59,7 @@
 
         <div class={`text-center mb-14 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Kontakt</span>
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Pojďme to <span class="text-cyan-600">postavit.</span></h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Pojďme se <span class="text-cyan-600">domluvit</span></h2>
             <p class="text-lg max-w-2xl mx-auto">Máte nápad na projekt? Napište mi nebo rovnou zavolejte – rádi se domluvíme na nezávazné konzultaci.</p>
         </div>
 
@@ -73,13 +73,13 @@
                 </div>
 
                 <div class="space-y-4">
-                    <a href="mailto:hello@dev.cz" class="flex items-center gap-4 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-cyan-300 hover:shadow-md transition-all group">
+                    <a href="mailto:immarw01@gmail.com" class="flex items-center gap-4 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-cyan-300 hover:shadow-md transition-all group">
                         <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-colors">
                             <svg class="w-5 h-5 text-cyan-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <div>
                             <div class="text-sm text-slate-500">E-mail</div>
-                            <div class="font-semibold text-slate-800">hello@dev.cz</div>
+                            <div class="font-semibold text-slate-800">immarw01@gmail.com</div>
                         </div>
                     </a>
 
@@ -89,7 +89,7 @@
                         </div>
                         <div>
                             <div class="text-sm text-slate-500">Telefon</div>
-                            <div class="font-semibold text-slate-800">+420 123 456 789</div>
+                            <div class="font-semibold text-slate-800">+420 605 005 262</div>
                         </div>
                     </a>
 
@@ -99,7 +99,7 @@
                         </div>
                         <div>
                             <div class="text-sm text-slate-500">Lokace</div>
-                            <div class="font-semibold text-slate-800">Kolín, Česká republika</div>
+                            <div class="font-semibold text-slate-800">Praha 10, Česká republika</div>
                         </div>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
                     <a href="https://gitlab.com/ImMarw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-cyan-600 hover:border-cyan-300 transition-all hover:-translate-y-0.5" title="GitLab">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"/></svg>
                     </a>
-                    <a href="https://instagram.com/immarw" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-cyan-600 hover:border-cyan-300 transition-all hover:-translate-y-0.5" title="Instagram">
+                    <a href="https://www.instagram.com/honzik.mw/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-cyan-600 hover:border-cyan-300 transition-all hover:-translate-y-0.5" title="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
                     </a>
                 </div>
