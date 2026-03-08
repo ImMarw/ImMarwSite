@@ -1,80 +1,100 @@
 <script>
+    import { onMount } from 'svelte';
+
     const projects = [
         {
             title: "RoseDrift",
             category: "HTML, CSS, JavaScript",
-            desc: "Příklad herního/komunitního portálu.",
-            // Nahraď reálnou cestou k tvému obrázku ve složce static/images/
+            desc: "Kompletní herní/komunitní portál s moderním designem a dynamickými animacemi. Responsivní layout optimalizovaný pro všechna zařízení.",
             imageUrl: "/images/Projekt1.png",
             liveUrl: "https://rose-drift.vercel.app/",
-            githubUrl: "https://gitlab.com/users/ImMarw/projects    "
+            githubUrl: "https://gitlab.com/users/ImMarw/projects",
+            techStack: ["HTML5", "CSS3", "JavaScript", "Vercel"]
         },
         {
-            title: "SaaS Aplikace",
+            title: "Megas Games",
             category: "SvelteKit",
-            desc: "Zakázka pro zahraniční herní server na platformě FiveM.",
-            // Nahraď reálnou cestou k tvému obrázku
+            desc: "SaaS aplikace pro zahraniční herní server na platformě FiveM. Komplexní systém s uživatelským rozhraním, správou obsahu a interaktivními prvky.",
             imageUrl: "/images/Projekt2.png",
             liveUrl: "https://megas.games/",
-            githubUrl: "https://gitlab.com/users/ImMarw/projects"
+            githubUrl: "https://gitlab.com/users/ImMarw/projects",
+            techStack: ["SvelteKit", "TailwindCSS", "API"]
         },
     ];
 
-    // Stav pro ovládání modálního okna s náhledem
+    // Preview modal state
     let previewUrl = null;
 
     const openPreview = (url) => {
         if (!url) return;
         previewUrl = url;
-        // Zamezí scrollování stránky na pozadí
         document.body.style.overflow = 'hidden';
     };
 
     const closePreview = () => {
         previewUrl = null;
-        // Obnoví scrollování stránky
         document.body.style.overflow = '';
     };
 
-    // Zavření okna pomocí klávesy Escape
     const handleKeydown = (e) => {
         if (e.key === 'Escape' && previewUrl) {
             closePreview();
         }
     };
+
+    let sectionEl;
+    let revealed = false;
+
+    onMount(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        revealed = true;
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+        if (sectionEl) observer.observe(sectionEl);
+        return () => observer.disconnect();
+    });
 </script>
 
 <svelte:window on:keydown={handleKeydown} />
 
-<section id="portfolio" class="py-24 px-6 relative">
+<section id="portfolio" class="py-24 px-6 relative" bind:this={sectionEl}>
     <div class="container mx-auto max-w-6xl">
-        <div class="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div class={`mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">Vybrané práce.</h2>
-                <p class="text-lg text-slate-600 max-w-xl">Ukázka reálných projektů a konceptů. Klikněte na Live Preview pro otestování přímo zde na stránce.</p>
+                <span class="section-label">Portfolio</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Vybrané <span class="text-cyan-600">práce.</span></h2>
+                <p class="text-lg text-slate-600 max-w-xl">Ukázka reálných projektů. Klikněte na Live Preview pro interaktivní náhled přímo zde na stránce.</p>
             </div>
-            <a href="https://gitlab.com/users/ImMarw/projects" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-slate-600 hover:text-cyan-600 font-semibold transition-colors">
-                Zobrazit celý GitLab
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.5-1.4 6.5-7a4.6 4.6 0 0 0-1.39-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.35-3.5 1.26a11.39 11.39 0 0 0-6 0C8.1 2.45 7 2.8 7 2.8a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 5.5 9.2c0 5.6 3.35 6.65 6.5 7a4.8 4.8 0 0 0-1 3.03V22"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <a href="https://gitlab.com/users/ImMarw/projects" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 bg-white text-slate-600 hover:text-cyan-600 hover:border-cyan-300 font-semibold transition-all text-sm shadow-sm hover:-translate-y-0.5">
+                Celý GitLab
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             </a>
         </div>
 
         <div class="grid md:grid-cols-2 gap-10">
-            {#each projects as project}
-                <div class="group flex flex-col h-full">
-                    <button type="button" on:click={() => openPreview(project.liveUrl)} class="block w-full h-72 rounded-3xl bg-slate-100 border border-slate-200 mb-6 overflow-hidden relative transition-all duration-300 group-hover:shadow-xl group-hover:shadow-cyan-900/5 group-hover:border-cyan-300 group-hover:-translate-y-1 cursor-pointer">
+            {#each projects as project, i}
+                <div class={`group flex flex-col h-full transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`} style="transition-delay: {200 + i * 150}ms;">
+                    <button type="button" on:click={() => openPreview(project.liveUrl)} class="block w-full h-72 rounded-3xl bg-slate-100 border border-slate-200 mb-6 overflow-hidden relative transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-cyan-900/10 group-hover:border-cyan-300 group-hover:-translate-y-2 cursor-pointer">
 
                         {#if project.imageUrl}
-                            <img src={project.imageUrl} alt={project.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                            <img src={project.imageUrl} alt={project.title} class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
                         {:else}
                             <div class="w-full h-full flex items-center justify-center bg-slate-100">
                                 <span class="text-slate-400 font-medium text-sm uppercase tracking-widest">[Obrázek]</span>
                             </div>
                         {/if}
 
-                        <div class="absolute inset-0 bg-white/0 group-hover:bg-white/40 backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100 z-20">
-                            <div class="w-14 h-14 bg-cyan-500 rounded-full flex items-center justify-center text-white shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6 z-20">
+                            <div class="px-5 py-2.5 bg-white/90 backdrop-blur-sm rounded-full text-sm font-bold text-slate-800 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                                Zobrazit náhled
                             </div>
                         </div>
                     </button>
@@ -82,14 +102,23 @@
                     <div class="flex flex-col flex-grow px-2 z-10 relative">
                         <div class="flex justify-between items-start mb-3">
                             <h3 class="text-2xl font-bold group-hover:text-cyan-600 transition-colors">{project.title}</h3>
-                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-md text-xs font-semibold text-slate-600 whitespace-nowrap ml-4">{project.category}</span>
+                            <span class="px-3 py-1 bg-white border border-slate-200 rounded-lg text-xs font-semibold text-slate-600 whitespace-nowrap ml-4">{project.category}</span>
                         </div>
 
-                        <p class="text-slate-600 leading-relaxed mb-6 flex-grow">{project.desc}</p>
+                        <p class="text-slate-600 leading-relaxed mb-5 flex-grow text-[15px]">{project.desc}</p>
+
+                        <!-- Tech Stack -->
+                        {#if project.techStack}
+                            <div class="flex flex-wrap gap-1.5 mb-5">
+                                {#each project.techStack as tech}
+                                    <span class="px-2.5 py-1 bg-cyan-50 border border-cyan-100 text-cyan-700 text-xs font-semibold rounded-md">{tech}</span>
+                                {/each}
+                            </div>
+                        {/if}
 
                         <div class="flex flex-wrap gap-3 mt-auto pt-2">
                             {#if project.liveUrl}
-                                <button type="button" on:click={() => openPreview(project.liveUrl)} class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-cyan-500 hover:shadow-md hover:-translate-y-0.5 transition-all">
+                                <button type="button" on:click={() => openPreview(project.liveUrl)} class="inline-flex items-center gap-2 px-5 py-2.5 bg-slate-900 text-white text-sm font-semibold rounded-xl hover:bg-cyan-500 hover:shadow-lg hover:-translate-y-0.5 transition-all">
                                     Live Preview
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
                                 </button>
@@ -109,8 +138,9 @@
     </div>
 </section>
 
+<!-- Preview Modal -->
 {#if previewUrl}
-    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 md:p-10 transition-opacity">
+    <div class="fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4 md:p-10">
         <button type="button" class="absolute inset-0 w-full h-full cursor-default" on:click={closePreview} aria-label="Zavřít náhled"></button>
 
         <div class="relative w-full max-w-[1400px] h-full bg-white rounded-2xl overflow-hidden shadow-2xl flex flex-col z-10 border border-slate-200 animate-reveal">
