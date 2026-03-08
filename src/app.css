@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+    --color-bg-light: #f8fafc;
+    --color-text-main: #0f172a;
+    --color-text-muted: #475569;
+
+    --color-cyan-400: #22d3ee;
+    --color-cyan-500: #06b6d4;
+    --color-cyan-600: #0891b2;
+
+    --font-sans: 'Inter', sans-serif;
+    --font-heading: 'Space Grotesk', sans-serif;
+
+    --animate-reveal: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+    @keyframes reveal {
+        0% { transform: translateY(20px); opacity: 0; }
+        100% { transform: translateY(0); opacity: 1; }
+    }
+}
+
+@layer base {
+    body {
+        background-color: var(--color-bg-light);
+        color: var(--color-text-main);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+        @apply font-heading tracking-tight text-slate-900;
+    }
+
+    p {
+        @apply text-slate-600;
+    }
+}
+
+/* Extrémně subtilní grid pozadí (neruší text) */
+@utility bg-grid-light {
+    background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* Standardizovaná čistá karta */
+@utility clean-card {
+    @apply bg-white border border-slate-200 rounded-3xl p-8 transition-all duration-300 shadow-sm;
+}
+
+@utility clean-card-hover {
+    &:hover {
+        @apply border-cyan-300 shadow-lg shadow-cyan-900/5 -translate-y-1;
+    }
+}
+
+/* Textový gradient pro akcenty */
+@utility text-gradient-cyan {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(135deg, #0f172a 0%, #0891b2 100%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #06b6d4;
+}
