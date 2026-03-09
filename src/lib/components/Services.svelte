@@ -5,25 +5,21 @@
         {
             title: "Webové stránky na míru",
             desc: "Moderní, rychlé a responsivní weby, které zaujmou na první pohled. Každý projekt stavím od nuly přesně podle vašich potřeb.",
-            tags: ["SvelteKit", "HTML/CSS", "Responsivní"],
             icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
         },
         {
             title: "Webové aplikace",
             desc: "SaaS platformy, dashboardy, interní systémy. Komplexní aplikace s důrazem na uživatelský zážitek a spolehlivost.",
-            tags: ["SPA/MPA", "API", "Real-time"],
             icon: "M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"
         },
         {
             title: "SEO & Optimalizace",
             desc: "Technické SEO, optimalizace rychlosti načítání a Core Web Vitals. Vaše stránky budou viditelné ve vyhledávačích.",
-            tags: ["Lighthouse", "Core Vitals", "Meta"],
             icon: "M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
         },
         {
             title: "Správa & Údržba",
             desc: "Dlouhodobé partnerství. Pravidelné aktualizace, monitoring, bezpečnostní záplaty a rozšiřování funkcionalit.",
-            tags: ["Monitoring", "Updates", "Podpora"],
             icon: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
         },
     ];
@@ -54,7 +50,6 @@
         <div class={`mb-16 text-center transition-all duration-700 ${revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <span class="section-label">Co nabízím</span>
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Komplexní webová <span class="text-cyan-600">řešení.</span></h2>
-            <p class="text-lg max-w-2xl mx-auto">Všechno tvořím na míru s důrazem na výkon, bezpečnost a čistotu kódu.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
