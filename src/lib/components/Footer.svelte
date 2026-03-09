@@ -20,7 +20,7 @@
 
 <footer class="relative z-20 border-t border-slate-200 bg-white/80 backdrop-blur-sm mt-12">
     <div class="container mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-4 gap-10 md:gap-8">
+        <div class="grid md:grid-cols-5 gap-10 md:gap-8">
 
             <!-- Branding -->
             <div class="md:col-span-1">
@@ -85,6 +85,16 @@
                         <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         Praha 10, Česká republika
                     </li>
+                </ul>
+            </div>
+
+            <!-- Billing Info -->
+            <div>
+                <h4 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Fakturační údaje</h4>
+                <ul class="space-y-2.5">
+                    <li class="text-sm text-slate-500">Jan Šťastný</li>
+                    <li class="text-sm text-slate-500">IČO 49499769</li>
+                    <li class="text-sm text-slate-500">Neplátce DPH</li>
                 </ul>
             </div>
         </div>
