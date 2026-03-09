@@ -71,6 +71,17 @@
 
         <!-- Menu Panel -->
         <div class="absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white/95 backdrop-blur-xl shadow-2xl p-8 pt-24 animate-slide-up overflow-y-auto" style="animation: slide-in-right 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;">
+            <!-- Close button -->
+            <button
+                class="absolute top-6 right-6 w-10 h-10 flex items-center justify-center rounded-xl hover:bg-slate-100 transition-colors"
+                on:click={closeMobileMenu}
+                aria-label="Zavřít menu"
+            >
+                <svg class="w-6 h-6 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
             <nav class="flex flex-col gap-2">
                 {#each navLinks as link, i}
                     <a
