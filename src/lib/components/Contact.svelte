@@ -83,7 +83,7 @@
                         </div>
                     </a>
 
-                    <a href="tel:+420123456789" class="flex items-center gap-4 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-cyan-300 hover:shadow-md transition-all group">
+                    <a href="tel:+420605005262" class="flex items-center gap-4 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-cyan-300 hover:shadow-md transition-all group">
                         <div class="w-10 h-10 rounded-xl bg-cyan-50 border border-cyan-100 flex items-center justify-center shrink-0 group-hover:bg-cyan-500 group-hover:border-cyan-500 transition-colors">
                             <svg class="w-5 h-5 text-cyan-600 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
